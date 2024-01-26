@@ -30,10 +30,10 @@ require (
 	go.etcd.io/etcd/client/v3 v3.5.0
 	go.uber.org/atomic v1.10.0
 	go.uber.org/zap v1.17.0
-	golang.org/x/exp v0.0.0-20200224162631-6cc2880d07d6
 	golang.org/x/oauth2 v0.0.0-20210402161424-2e8d93401602
 	golang.org/x/sync v0.3.0
 	golang.org/x/time v0.0.0-20201208040808-7e3f01d25324
+	google.golang.org/api v0.44.0
 	google.golang.org/grpc v1.48.0
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0
 )
@@ -64,6 +64,8 @@ require (
 	github.com/goccy/go-json v0.9.7 // indirect
 	github.com/gogo/protobuf v1.3.2 // indirect
 	github.com/golang-jwt/jwt/v5 v5.0.0 // indirect
+	github.com/golang/groupcache v0.0.0-20200121045136-8c9f03a8e57e // indirect
+	github.com/googleapis/gax-go/v2 v2.0.5 // indirect
 	github.com/grpc-ecosystem/go-grpc-middleware v1.3.0 // indirect
 	github.com/hashicorp/hcl v1.0.0 // indirect
 	github.com/inconshreveable/mousetrap v1.0.0 // indirect
@@ -101,6 +103,7 @@ require (
 	github.com/ugorji/go/codec v1.2.7 // indirect
 	go.etcd.io/etcd/api/v3 v3.5.0 // indirect
 	go.etcd.io/etcd/client/pkg/v3 v3.5.0 // indirect
+	go.opencensus.io v0.23.0 // indirect
 	go.uber.org/multierr v1.6.0 // indirect
 	golang.org/x/crypto v0.14.0 // indirect
 	golang.org/x/net v0.17.0 // indirect

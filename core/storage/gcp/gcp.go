@@ -1,6 +1,7 @@
 package gcp
 
 import (
+	"context"
 	"net/http"
 	"strings"
 
@@ -10,6 +11,7 @@ import (
 	"go.uber.org/atomic"
 	"golang.org/x/oauth2"
 	"golang.org/x/oauth2/google"
+	raw "google.golang.org/api/storage/v1"
 )
 
 const (
@@ -31,7 +33,10 @@ type transport interface {
 
 // NewWrapHTTPTransport constructs a new WrapHTTPTransport
 func NewWrapHTTPTransport(secure bool) (*WrapHTTPTransport, error) {
-	tokenSrc := google.ComputeTokenSource("")
+	tokenSrc, err := google.DefaultTokenSource(context.Background(), raw.DevstorageFullControlScope)
+	if err != nil {
+		return nil, errors.Wrap(err, "failed to create default token source")
+	}
 	// in fact never return err
 	backend, err := minio.DefaultTransport(secure)
 	if err != nil {
